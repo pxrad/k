@@ -1,10 +1,10 @@
 :root {
-    --background-color: #1a1a1d;
-    --secondary-background-color: #4e4e50;
-    --primary-color: #6f2232;
-    --secondary-primary-color: #950740;
-    --text-color: #c3073f;
-    --secondary-text-color: #6f2232;
+    --background-color: #282c34;
+    --secondary-background-color: #3c4048;
+    --primary-color: #61dafb;
+    --secondary-primary-color: #21a1f1;
+    --text-color: #abb2bf;
+    --secondary-text-color: #98c379;
 }
 
 html {
@@ -27,7 +27,7 @@ header {
     top: 0;
     width: 90%;
     padding: 12px calc(6vw + 10px);
-    background: #1a1a1d5f;
+    background: #282c345f;
     display: flex;
     justify-content: space-between;
     align-items: center;
