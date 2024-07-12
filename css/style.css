@@ -1,12 +1,11 @@
 :root {
-    --background-color: #080808;
-    --secondary-background-color: #156886;
-    --primary-color: #3aafa9;
-    --secondary-primary-color: #287A7B;
-    --text-color: #ffffff;
-    --secondary-text-color: #DEF2F1;
+    --background-color: #1a1a1d;
+    --secondary-background-color: #4e4e50;
+    --primary-color: #6f2232;
+    --secondary-primary-color: #950740;
+    --text-color: #c3073f;
+    --secondary-text-color: #6f2232;
 }
-
 
 html {
     scroll-behavior: smooth;
@@ -15,7 +14,7 @@ html {
 * {
     margin: 0;
     padding: 0;
-    font-family: "Gill Sans", sans-serif;
+    font-family: "Arial", sans-serif;
 }
 
 body {
@@ -28,7 +27,7 @@ header {
     top: 0;
     width: 90%;
     padding: 12px calc(6vw + 10px);
-    background: #0808085f;
+    background: #1a1a1d5f;
     display: flex;
     justify-content: space-between;
     align-items: center;
