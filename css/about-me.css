@@ -34,12 +34,11 @@
     margin: auto calc(4vw + 40px);
 }
 
-.profile-img-wrapper {
-    background-image: radial-gradient(
-        var(--secondary-primary-color) 10%, 
-        var(--background-color) 70%,
-        transparent 50%
-    );
+.profile-img-wrapper img {
+    object-fit: cover;
+    width: 1440px; 
+    height: 1920px; 
+    border-radius: 20%;
 }
 
 @media screen and (max-width: 680px) {
