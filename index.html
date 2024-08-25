@@ -74,8 +74,8 @@
                 </div>
             </div>
 
-            <div class="experience-item experience-item-active" id="item-internship-experience">
-                <ul>
+            <div id="internship-experience" class="experience-content active-content">
+            <ul>
                     <li>
                         <p class="timeline-item-header">Business Development Intern</p>
                         <p class="timeline-item-subheader">PT Sayap Mas Utama (WINGS Group) | September, 2024 - Present</p>
@@ -104,10 +104,9 @@
                         <span class="circle"></span>
                     </li>
                 </ul>
-            </div>
-
-            <div class="experience-item experience-item-active" id="item-research-experience">
-                <ul>
+        </div>
+            <div id="research-experience" class="experience-content" style="display:none;">
+            <ul>
                     <li>
                         <p class="timeline-item-header">Research Assistant</p>
                         <p class="timeline-item-subheader">Bina Nusantara University | May, 2024 - Present</p>
@@ -144,10 +143,10 @@
                         <span class="circle"></span>
                     </li>
                 </ul>
-            </div>
+        </div>
 
-            <div class="experience-item" id="item-organizational-experience">
-                <ul>
+            <div id="organizational-experience" class="experience-content" style="display:none;">
+            <ul>
                     <li>
                         <p class="timeline-item-header">Company Visit</p>
                         <p class="timeline-item-subheader">Huawei Indonesia | August, 2024</p>
@@ -444,9 +443,10 @@
                         <span class="circle"></span>
                     </li>
                 </ul>
-            </div>
-            <div class="experience-item" id="item-teaching-experience">
-                <ul>
+        </div>
+
+            <div id="teaching-experience" class="experience-content" style="display:none;">
+            <ul>
                     <li>
                         <p class="timeline-item-header">E-Supply Chain Management Laboratory Assistant</p>
                         <p class="timeline-item-subheader">Bina Nusantara University | September, 2024 - January, 2025</p>
@@ -553,9 +553,34 @@
                         <span class="circle"></span>
                     </li>
                 </ul>
-            </div>
         </section>
     </div>
+
+    <script>
+        // Function to handle tab switching
+function selectExperienceTab(tabId) {
+    // Hide all tab content
+    var tabContents = document.getElementsByClassName('experience-content');
+    for (var i = 0; i < tabContents.length; i++) {
+        tabContents[i].style.display = 'none';
+    }
+
+    // Remove 'tab-active' class from all tabs
+    var tabs = document.getElementsByClassName('tab-experience-item');
+    for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('tab-active');
+    }
+
+    // Show the selected tab content and add 'tab-active' class to the selected tab
+    document.getElementById(tabId).style.display = 'block';
+    document.querySelector('[onclick="selectExperienceTab(\'' + tabId + '\')"]').classList.add('tab-active');
+}
+
+// Initialize the first tab as active
+document.addEventListener("DOMContentLoaded", function() {
+    selectExperienceTab('internship-experience');
+});
+</script>
     
     <!-- education section -->
     <section class="education" id="education">
