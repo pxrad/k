@@ -1026,7 +1026,73 @@ I loved learning. Join in Harvard Enduring Material, giving me an opportunity to
             <p>Copyright &copy <highlight>Darius</highlight> | 2023</p>
         </footer>
     </section>
+// ===== SMOOTH SCROLL NAVBAR =====
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    if (this.getAttribute('href').startsWith('#')) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
 
+// ===== ACTIVE NAVBAR (highlight menu) =====
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (scrollY >= sectionTop) {
+      current = section.getAttribute("id");
+    }
+  });
+
+  navLinks.forEach(a => {
+    a.classList.remove("active");
+    if (a.getAttribute("href").includes(current)) {
+      a.classList.add("active");
+    }
+  });
+});
+
+// ===== ANIMASI MUNCUL =====
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll("section, .experience-item").forEach(el => {
+  el.classList.add("fade");
+  observer.observe(el);
+});
+
+// ===== TYPING EFFECT =====
+const text = "Raphael Albert Darius";
+let i = 0;
+function typing() {
+  const el = document.querySelector(".intro-header highlight");
+  if (!el) return;
+
+  el.innerHTML = "";
+  function type() {
+    if (i < text.length) {
+      el.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, 50);
+    }
+  }
+  type();
+}
+typing();
+
+</script>
 </body>
 <script src="javascript.js"></script>
 </html>
