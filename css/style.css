@@ -127,3 +127,30 @@ highlight {
         text-align: center;
     }
 }
+
+/* ANIMASI */
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* NAVBAR ACTIVE */
+nav a.active {
+  color: #4dd0e1;
+  font-weight: bold;
+}
+
+/* HOVER EFFECT */
+a, button {
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #4dd0e1;
+}
